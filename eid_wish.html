@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Eid Mubarak</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+input {
+    padding: 12px;
+    width: 250px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 25px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 25px;
+    background: #00c9ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #92fe9d;
+    color: black;
+}
+
+.card {
+    display: none;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 2s ease;
+}
+
+h1 {
+    font-size: 40px;
+    color: #ffd700;
+    animation: glow 2s infinite alternate;
+}
+
+p {
+    font-size: 22px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes glow {
+    from {text-shadow: 0 0 10px #ffd700;}
+    to {text-shadow: 0 0 25px #ffae00;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Enter Your Name ❤️</h2>
+    <input type="text" id="nameInput" placeholder="নাম লিখো...">
+    <br>
+    <button onclick="showWish()">Eid Wish 🎉</button>
+
+    <div class="card" id="wishCard">
+        <h1>🌙 Eid Mubarak 🌙</h1>
+        <p id="message"></p>
+    </div>
+</div>
+
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" loop>
+    <!-- এখানে তুই নিজের mp3 লিংক দিবি -->
+    <source src="/Facebook_1774006582380.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function showWish() {
+    let name = document.getElementById("nameInput").value;
+
+    if(name === "") {
+        alert("নাম লিখো আগে!");
+        return;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Dear " + name + ",<br><br> তোমাকে জানাই হৃদয়ের গভীর থেকে <b>ঈদ মোবারক</b> 💖<br> তোমার জীবন হোক সুখ, শান্তি আর ভালোবাসায় ভরা ✨";
+
+    document.getElementById("wishCard").style.display = "block";
+
+    // 🎵 Music Play
+    let music = document.getElementById("bgMusic");
+    music.play();
+}
+</script>
+
+</body>
+</html>
