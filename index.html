@@ -15,13 +15,13 @@ body {
     text-align: center;
 }
 
-/* 📱 Responsive Container */
+/* 📱 Container */
 .container {
     margin-top: 60px;
     padding: 15px;
 }
 
-/* 📱 Input Responsive */
+/* 📱 Input */
 input {
     padding: 12px;
     width: 90%;
@@ -32,7 +32,7 @@ input {
     font-size: 16px;
 }
 
-/* 📱 Button Responsive */
+/* 📱 Button */
 button {
     padding: 12px 25px;
     margin-top: 15px;
@@ -52,7 +52,7 @@ button:hover {
     color: black;
 }
 
-/* 📱 Card Responsive */
+/* 📱 Card */
 .card {
     display: none;
     margin-top: 30px;
@@ -63,24 +63,31 @@ button:hover {
     animation: fadeIn 2s ease;
 }
 
-/* 📱 Heading Responsive */
+/* Heading */
 h1 {
     font-size: 28px;
     color: #ffd700;
     animation: glow 2s infinite alternate;
 }
 
-/* 📱 Text Responsive */
+/* Text */
 p {
     font-size: 18px;
 }
 
-/* 📱 Small Screen Fix */
+/* 👨‍💻 Credit */
+.credit {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #00c9ff;
+    text-shadow: 0 0 10px #00c9ff;
+}
+
+/* 📱 Small screen */
 @media (max-width: 400px) {
     h1 {
         font-size: 24px;
     }
-
     p {
         font-size: 16px;
     }
@@ -110,11 +117,15 @@ p {
     <div class="card" id="wishCard">
         <h1>🌙 Eid Mubarak 🌙</h1>
         <p id="message"></p>
+
+        <!-- 👇 Credit -->
+        <p class="credit">Developed by Emon </p>
     </div>
 </div>
 
 <!-- 🎵 Background Music -->
 <audio id="bgMusic" loop>
+    <!-- GitHub raw link দিলে ভালো কাজ করবে -->
     <source src="Facebook_1774006582380.mp3" type="audio/mpeg">
 </audio>
 
